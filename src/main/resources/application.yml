@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rm-wz966n236z2v96401eo.mysql.rds.aliyuncs.com:3306/xukang-pre?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: xk_pre
+    password: xk-pre#a1b2c3
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kingwarluo.es.mapper.ShopSkuMapper">
+
+    <select id="queryByKeyword" resultType="com.kingwarluo.es.domain.ShopSku">
+        select
+          sku.id as id,
+          sku.shop_id as shopId,
+          sku.product_id as productId,
+          sku.product_category_id as productCategoryId,
+          sku.product_sn as productSn,
+          sku.sku_no as skuNo,
+          sku.product_spec_id as productSpecId,
+          sku.spec as spec,
+          sku.discount as discount,
+          sku.sku_name as skuName,
+          sku.sku_desc as skuDesc,
+          sku.market_price as marketPrice,
+          sku.discount_price as discountPrice,
+          sku.retail_price as retailPrice,
+          sku.pic_url as picUrl,
+          sku.create_uid as createUid,
+          sku.update_uid as updateUid,
+          sku.create_time as createTime,
+          sku.update_time as updateTime,
+          sku.sku_status as skuStatus,
+          sku.product_channel_id as productChannelId,
+          sku.sku_type as skuType,
+          sku.is_delete as isDelete,
+          sku.sales_number as salesNumber,
+          sku.purchase_number as purchaseNumber,
+          sku.hot_price as hotPrice,
+          sku.vip_limit as vipLimit,
+          sku.shop_limit as shopLimit,
+          sku.batch_no as batchNo,
+          sku.special_banner_id as specialBannerId,
+          sku.is_system as isSystem,
+          sku.is_flag as isFlag,
+          sku.top_flag as topFlag,
+          sku.top_update_time as topUpdateTime,
+          sku.category_label_id as categoryLabelId,
+          sku.life_audit_status as lifeAuditStatus,
+          sku.reason as reason,
+          sku.is_modify_image as isModifyImage,
+          shop.shop_lat as shopLat,
+          shop.shop_lng as shopLng
+        from tb_shop_sku sku
+        left join tb_shop shop on sku.shop_id = shop.id
+        <where>
+          <if test="keyword != null and keyword != ''">
+            sku.sku_name like concat('%', #{keyword}, '%')
+          </if>
+        </where>
+        order by sku.id asc
+    </select>
+
+</mapper>

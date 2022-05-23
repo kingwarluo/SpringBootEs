@@ -1,0 +1,167 @@
+{
+  "shop-sku" : {
+    "mappings" : {
+      "properties" : {
+        "batchNo" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "categoryLabelId" : {
+          "type" : "long"
+        },
+        "createTime" : {
+          "type" : "long"
+        },
+        "createUid" : {
+          "type" : "long"
+        },
+        "discount" : {
+          "type" : "long"
+        },
+        "discountPrice" : {
+          "type" : "long"
+        },
+        "hotPrice" : {
+          "type" : "long"
+        },
+        "id" : {
+          "type" : "long"
+        },
+        "isDelete" : {
+          "type" : "long"
+        },
+        "isFlag" : {
+          "type" : "long"
+        },
+        "isSystem" : {
+          "type" : "long"
+        },
+        "lifeAuditStatus" : {
+          "type" : "long"
+        },
+        "location" : {
+          "type" : "geo_point"
+        },
+        "marketPrice" : {
+          "type" : "long"
+        },
+        "picUrl" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "productCategoryId" : {
+          "type" : "long"
+        },
+        "productChannelId" : {
+          "type" : "long"
+        },
+        "productId" : {
+          "type" : "long"
+        },
+        "productSn" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "productSpecId" : {
+          "type" : "long"
+        },
+        "purchaseNumber" : {
+          "type" : "long"
+        },
+        "retailPrice" : {
+          "type" : "long"
+        },
+        "salesNumber" : {
+          "type" : "long"
+        },
+        "shopId" : {
+          "type" : "long"
+        },
+        "shopLat" : {
+          "type" : "float"
+        },
+        "shopLimit" : {
+          "type" : "long"
+        },
+        "shopLng" : {
+          "type" : "float"
+        },
+        "skuDesc" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "skuName" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "skuNo" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "skuStatus" : {
+          "type" : "long"
+        },
+        "skuType" : {
+          "type" : "long"
+        },
+        "spec" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "specialBannerId" : {
+          "type" : "long"
+        },
+        "topFlag" : {
+          "type" : "long"
+        },
+        "topUpdateTime" : {
+          "type" : "long"
+        },
+        "updateTime" : {
+          "type" : "long"
+        },
+        "updateUid" : {
+          "type" : "long"
+        },
+        "vipLimit" : {
+          "type" : "long"
+        }
+      }
+    }
+  }
+}
