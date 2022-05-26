@@ -12,7 +12,7 @@ public class ElasticSearchConfig {
 
     @Bean
     public RestHighLevelClient restHighLevelClient(){
-        return new RestHighLevelClient(RestClient.builder(new HttpHost("101.43.122.53",9200,"http")));
+        return new RestHighLevelClient(RestClient.builder(new HttpHost("12101.43.122.53",9200,"http")));
     }
 
 }

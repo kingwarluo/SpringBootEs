@@ -2,6 +2,7 @@ package com.kingwarluo.es.controller;
 
 import com.kingwarluo.es.domain.ShopSku;
 import com.kingwarluo.es.param.SearchParam;
+import com.kingwarluo.es.service.EsRestTemplateService;
 import com.kingwarluo.es.service.ShopSkuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,11 +25,18 @@ public class ShopSkuController {
     @Autowired
     private ShopSkuService shopSkuService;
 
+    @Autowired
+    private EsRestTemplateService templateService;
+
     @RequestMapping("/search")
-    public List<Map<String, Object>> search(SearchParam param) throws IOException {
+    public List<ShopSku> search(SearchParam param) throws IOException {
         return shopSkuService.search(param);
     }
 
+    @RequestMapping("/template/search")
+    public List<ShopSku> templateSearch(SearchParam param) throws IOException {
+        return templateService.search(param);
+    }
 
     @RequestMapping("/toEs/{skip}")
     public Boolean toEs(@PathVariable("skip") Integer skip) throws IOException {

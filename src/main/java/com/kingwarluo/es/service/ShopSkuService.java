@@ -18,5 +18,5 @@ public interface ShopSkuService {
 
     Boolean toEs(Integer skip) throws IOException;
 
-    List<Map<String, Object>> search(SearchParam param) throws IOException;
+    List<ShopSku> search(SearchParam param) throws IOException;
 }

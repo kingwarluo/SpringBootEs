@@ -14,6 +14,7 @@ import java.util.List;
  * @date 2022/5/23 9:54
  */
 @Data
+@Document(indexName = "shop-sku")
 public class ShopSku implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -110,6 +111,11 @@ public class ShopSku implements Serializable {
      * 经度
      */
     private Double shopLng;
+
+    /**
+     * 距离
+     */
+    private String distance;
 
     @Data
     public class Point {
