@@ -1,7 +1,9 @@
 package com.kingwarluo.es.domain;
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Mapping;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -19,6 +21,7 @@ public class ShopSku implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
     private Long id;
 
     private Long shopId;
