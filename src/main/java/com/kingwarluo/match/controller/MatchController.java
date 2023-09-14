@@ -89,7 +89,7 @@ public class MatchController {
             response.setHeader("Cache-Control", "no-cache,no-store");
             response.setStatus(HttpServletResponse.SC_OK);
             try {
-                response.getWriter().println(System.currentTimeMillis());
+                response.getWriter().println(new Date());
             } catch (IOException e) {
                 e.printStackTrace();
             }
